@@ -1,18 +1,14 @@
 <template>
-  <Card :title="title">
-    <div ref="chartRef" :style="{ height, width }"></div>
+  <Card :title="title" :style="{ margin: '8px' }">
+    <div ref="chartRef" :style="{ height: '200px', width: '100%' }"></div>
   </Card>
 </template>
-<script lang="ts">
-  import { basicProps } from './props';
-</script>
 <script lang="ts" setup>
   import { onMounted, ref, Ref } from 'vue';
   import { Card } from 'ant-design-vue';
   import { useECharts } from '/@/hooks/web/useECharts';
 
   defineProps({
-    ...basicProps,
     title: String,
   });
   const chartRef = ref<HTMLDivElement | null>(null);

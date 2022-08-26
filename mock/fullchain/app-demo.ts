@@ -36,7 +36,7 @@ const demoDetail = (keyword) => {
 };
 export default [
   {
-    url: '/basic-api/biz/table/getDemoList',
+    url: '/basic-api/app/table/getDemoList',
     timeout: 100,
     method: 'get',
     response: ({ query }) => {
@@ -45,7 +45,7 @@ export default [
     },
   },
   {
-    url: '/basic-api/biz/table/getDemoDetail',
+    url: '/basic-api/app/table/getDemoDetail',
     timeout: 100,
     method: 'get',
     response: ({ query }) => {

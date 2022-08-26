@@ -1,14 +1,14 @@
 <template>
-  <div class="mb-4">
-    <Card>
+  <div>
+    <Card :style="{ margin: '16px' }">
       <BasicForm @register="register" @submit="handleSubmit" />
     </Card>
-
     <Card
       :tab-list="settingList"
       v-bind="$attrs"
       :active-tab-key="activeKey"
       @tab-change="onTabChange"
+      :style="{ margin: '16px' }"
     >
       <template v-if="activeKey === '1'">
         <div class="md:flex enter-y">
