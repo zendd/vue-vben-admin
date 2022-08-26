@@ -9,6 +9,8 @@
     :targetKeys="getTargetKeys"
     :showSearch="showSearch"
     @change="handleChange"
+    :list-style="listStyle"
+    :titles="titles"
   />
 </template>
 
@@ -44,7 +46,9 @@
       },
       selectedKeys: { type: Array<string> },
       showSelectAll: { type: Boolean, default: false },
-      targetKeys: { type: Array<string> },
+      targetKeys: { type: Array<string> }, // 选中的数据
+      listStyle: { type: Object },
+      titles: { type: Array<string> },
     },
     emits: ['options-change', 'change'],
     setup(props, { attrs, emit }) {
@@ -104,6 +108,7 @@
       async function fetch() {
         const api = props.api;
         if (!api || !isFunction(api)) {
+          debugger;
           if (Array.isArray(props.dataSource)) {
             _dataSource.value = props.dataSource;
           }
