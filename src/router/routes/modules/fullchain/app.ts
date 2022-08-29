@@ -9,7 +9,7 @@ const app: AppRouteModule = {
   component: LAYOUT,
   redirect: '/app/list',
   meta: {
-    orderNo: 2,
+    orderNo: 3,
     icon: 'ion:layers-outline',
     title: '应用管理',
   },
